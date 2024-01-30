@@ -1,0 +1,18 @@
+:root {
+  --main-background: #e1dbd6;
+  --main-point: #625c56;
+  --main-white: #ffffff;
+  --point-red: #f39889;
+  --point-green: #8ed5be;
+  --point-yellow: #f0d36d;
+  --point-blue: #9bc9e6;
+  --gray-dark-text-1: #323232;
+  --gray-medium-dark: #646464;
+  --gray-medium-text-2: #969696;
+  --gray-light-medium: #d8d8d8;
+  --gray-light: #f4f4f4;
+  --basic-red: #d32f2f;
+  --basic-orange: #f9a825;
+  --basic-green: #4caf50;
+  --basic-blue: #0091ea;
+}
