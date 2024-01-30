@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../styles/variables.css";
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../public/fonts/NotoSansKR-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../public/fonts/NotoSansKR-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../public/fonts/NotoSansKR-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer utilities {
+  .xl-bold {
+    font-family: NotoSansKR;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; /* 144.444% */
+  }
+
+  .xl-regular {
+    font-family: NotoSansKR;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 144.444% */
+  }
+
+  .large-bold {
+    font-family: NotoSansKR;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+  }
+
+  .large-regular {
+    font-family: NotoSansKR;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+
+  .medium-bold {
+    font-family: NotoSansKR;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 157.143% */
+  }
+
+  .medium-medium {
+    font-family: NotoSansKR;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 157.143% */
+  }
+
+  .medium-regular {
+    font-family: NotoSansKR;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+  }
+
+  .small-medium {
+    font-family: NotoSansKR;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 166.667% */
+  }
+
+  .small-regular {
+    font-family: NotoSansKR;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+  }
+
+  .gangwon-xl {
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+  }
+
+  .gangwon-large {
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 144.444% */
+  }
+
+  .gangwon-medium {
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+  }
+
+  .gangwon-small {
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+  }
+}
+
+body {
+  font-family: "NotoSansKR";
+  background-color: var(--main-background);
+}
