@@ -8,7 +8,7 @@ interface noticeListProps {
 const NoticeList = ({ name, isChecked }: noticeListProps) => {
   return (
     <div
-      className={`w-312 h-46 bg-white rounded-8 flex items-center pl-16 ${
+      className={`w-312 h-46 bg-white rounded-8 flex items-center pl-16 cursor-pointer ${
         isChecked ? "opacity-40" : ""
       }`}
     >
