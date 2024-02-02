@@ -1,3 +1,4 @@
+import MainDetail from "../../components/templates/main/MainDetail";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../../styles/globals.css";
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MainDetail />
+        {children}
+      </body>
     </html>
   );
 }
