@@ -40,7 +40,11 @@ const Letter = ({ letterText, user, backgroundColor, isMine }: LetterProps) => {
           <h1>익명</h1>
         )}
         {isMine && (
-          <Image className="w-18 h-18 ml-auto" src={trash} alt="trash" />
+          <Image
+            className="w-18 h-18 ml-auto cursor-pointer"
+            src={trash}
+            alt="trash"
+          />
         )}
       </div>
     </div>

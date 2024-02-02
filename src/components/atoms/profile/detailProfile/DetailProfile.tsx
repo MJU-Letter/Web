@@ -19,9 +19,12 @@ const DetailProfile = ({
   ...props
 }: DetailProfileProps) => {
   return (
-    <div className="w-320 h-117 rounded-12 bg-main-white flex items-center justify-center">
+    <div
+      {...props}
+      className="w-320 h-117 rounded-12 bg-main-white flex items-center justify-center cursor-pointer"
+    >
       <Image
-        className="rounded-[50%] mr-16 object-contain"
+        className="w-77 h-77 rounded-[50%] mr-16 object-contain"
         src={profileImg}
         alt="profileImg"
       />

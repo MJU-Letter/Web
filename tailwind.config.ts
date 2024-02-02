@@ -45,9 +45,11 @@ const config: Config = {
         "basic-green": "var(--basic-green)",
         "basic-blue": "var(--basic-blue)",
       },
-
       screens: {
         tablet: "329px",
+      },
+      zIndex: {
+        modal: "500",
       },
     },
   },

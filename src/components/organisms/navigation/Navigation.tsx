@@ -1,3 +1,4 @@
+"use client";
 import NoticeIcon from "../../atoms/notice/noticeIcon/NoticeIcon";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -12,16 +13,24 @@ const Navigation = () => {
   };
   return (
     <>
-      {isOpened && <NavigationList />}
-      <div className="flex items-center  w-368 h-56 py-12 px-16 bg-main-background">
-        <div onClick={handleIsOpened}>
-          <Image className="w-67 h-32 mr-200" src={logo} alt="logo" />
+      {isOpened ? (
+        <NavigationList />
+      ) : (
+        <div className="flex items-center  w-368 h-56 py-12 px-16 bg-main-background">
+          <div>
+            <Image className="w-67 h-32 mr-200" src={logo} alt="logo" />
+          </div>
+          <div className="flex">
+            <NoticeIcon isOn={false} />
+            <Image
+              className="ml-12 w-24 h-24 cursor-pointer"
+              onClick={handleIsOpened}
+              src={menu}
+              alt="menu"
+            />
+          </div>
         </div>
-        <div className="flex">
-          <NoticeIcon isOn={false} />
-          <Image className="ml-12 w-24 h-24" src={menu} alt="menu" />
-        </div>
-      </div>
+      )}
     </>
   );
 };

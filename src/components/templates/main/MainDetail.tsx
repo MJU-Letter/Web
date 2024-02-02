@@ -1,3 +1,4 @@
+"use client";
 import DetailProfile from "../../atoms/profile/detailProfile/DetailProfile";
 import React from "react";
 import test from "../../../../public/icons/testProfile.png";
@@ -7,7 +8,7 @@ import BottomFixedBtn from "../../atoms/button/bottomFixed/BottomFixed";
 const MainDetail = () => {
   return (
     <>
-      <div className="mt-20 relative w-360 flex flex-col items-center justify-center">
+      <div className="mt-20 relative  w-360 flex flex-col items-center justify-start">
         <div className="mb-28">
           <DetailProfile
             profileImg={test}
@@ -73,9 +74,9 @@ const MainDetail = () => {
             </div>
           </div>
         </div>
-        <div className="m-16 absolute bottom-0 right-0">
+        {/* <div className="m-16 absolute bottom-0 right-0">
           <BottomFixedBtn usage={"write"} />
-        </div>
+        </div> */}
       </div>
     </>
   );

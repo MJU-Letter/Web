@@ -1,3 +1,4 @@
+"use client";
 import MainProfile from "../../atoms/profile/mainProfile/MainProfile";
 import SearchBar from "../../organisms/searchBar/SearchBar";
 import React, { useState } from "react";
