@@ -7,6 +7,7 @@ const ModalContent = ({ info, noBtn, yesBtn }: modalProps) => {
       <div className="text-gray-dark-text-1 text-center whitespace-pre-line mb-44 ">
         {info}
       </div>
+
       {noBtn && yesBtn && (
         <div className="flex items-center justify-between">
           <button

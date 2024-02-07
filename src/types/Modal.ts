@@ -9,3 +9,12 @@ export interface modalProps {
     handler?: () => void;
   };
 }
+
+export interface AuthModalProps {
+  authStatus: undefined | "proceeding" | "checking" | "failed" | "successed";
+  studentInfo?: {
+    name: string;
+    major: string;
+    studentId: string;
+  };
+}
