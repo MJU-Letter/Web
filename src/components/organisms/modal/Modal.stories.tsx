@@ -33,3 +33,9 @@ export const oneBtn: Story = {
     info: "안녕하십니까? \n 안녕하십니까",
   },
 };
+
+export const noBtn: Story = {
+  args: {
+    info: "안녕하십니까? \n 안녕하십니까",
+  },
+};
