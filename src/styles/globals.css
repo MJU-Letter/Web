@@ -114,6 +114,14 @@
     line-height: 28px; /* 140% */
   }
 
+  .gangwon-xl-under {
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+  }
+
   .gangwon-large {
     font-family: "GangwonEduSaeeum_OTFMediumA";
     font-size: 18px;
