@@ -1,3 +1,4 @@
+"use client";
 import DetailProfile from "@/components/atoms/profile/detailProfile/DetailProfile";
 import test from "../../../../public/icons/testProfile.png";
 import React, { useState } from "react";

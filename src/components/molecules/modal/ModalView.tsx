@@ -13,7 +13,7 @@ const ModalView = ({ children, ...props }: Props) => {
   };
 
   return (
-    <div className="fixed bg-[#00000030] top-0 left-0 w-full h-full flex justify-center items-center">
+    <div className="fixed bg-[#00000030] top-0 left-0 w-full h-full flex justify-center items-center z-modal">
       <div onClick={handleClickModalView} {...props}>
         {children}
       </div>

@@ -46,10 +46,12 @@ const config: Config = {
         "basic-blue": "var(--basic-blue)",
       },
       screens: {
-        tablet: "329px",
+        tablet: "1000px",
       },
       zIndex: {
-        modal: "500",
+        modal: "100",
+        navigatoinList: "200",
+        letterModal: "200",
       },
     },
   },

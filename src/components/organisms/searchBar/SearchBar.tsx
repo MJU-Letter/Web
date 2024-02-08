@@ -22,19 +22,19 @@ const SearchBar = ({
   };
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
+    setSearchValue("");
     setIsMenuVisible(false);
   };
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value.length > 10) {
-      // 입력값의 길이가 10자를 초과하면
-      alert("최대 10자까지만 입력 가능합니다."); // 경고창을 띄웁니다.
+      alert("최대 10자까지만 입력 가능합니다.");
     } else {
       setSearchValue(e.target.value);
     }
   };
   return (
     <>
-      <div className="relative w-206 h-38 bg-white rounded-8 flex items-center justify-start pl-12">
+      <div className="relative w-206 h-38 bg-white rounded-8 flex items-center justify-start pl-12 mr-24">
         <div className="medium-regular text-black">{selectedOption}</div>
         <Image
           onClick={handleArrowDownClick}
@@ -47,10 +47,11 @@ const SearchBar = ({
           placeholder="검색어를 입력하세요"
           onChange={handleInputChange}
           maxLength={10}
+          value={searchValue}
         />
       </div>
       {isMenuVisible && (
-        <div className="top-[80px] rounded-8 py-8 absolute w-62 h-84 bg-white medium-regular text-black ">
+        <div className="top-[120px] rounded-8 py-8 absolute w-62 h-84 bg-white medium-regular text-black ">
           <div
             className="w-62 h-30 pl-12 mb-8 cursor-pointer"
             onClick={() => handleOptionClick("이름")}
