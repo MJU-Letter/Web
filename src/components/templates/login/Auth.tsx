@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import logo from "../../../../public/icons/logo.png";
@@ -44,6 +45,7 @@ const Auth = ({ isUploaded, handleUpload }: AuthTemplateProps) => {
       {authStatus && authStatus !== "successed" && (
         <AuthModal authStatus={authStatus} studentInfo={studentInfo} />
       )}
+
       <div className="w-360 min-h-640 flex flex-col items-center justify-center text-center text-main-point">
         <Image
           className="w-204 h-96 object-contain mb-32"

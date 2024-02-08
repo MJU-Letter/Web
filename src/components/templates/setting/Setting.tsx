@@ -1,30 +1,29 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import arrowRight from "../../../../public/icons/arrowRight.png";
 import Toggle from "@/components/atoms/button/toggle/Toggle";
+import Link from "next/link";
 
 const Setting = () => {
+  const [isOn, setIsOn] = useState(false);
   return (
     <div className="text-main-point flex flex-col items-center w-360 min-h-584 mt-16 ">
       <h1 className="large-bold mb-28 text-center">설정</h1>
       <div className="pl-24 pr-20 flex flex-col justify-center items-center w-360">
         <div className="w-full h-54 mb-4 flex items-center justify-between">
           <h2 className="medium-bold">프로필 수정하기</h2>
-          <button>
+
+          <Link href={"setting/profile"}>
             <Image className="w-24 h-24" src={arrowRight} alt="arrowRight" />
-          </button>
+          </Link>
         </div>
         <div className="w-full h-90 flex flex-col justify-center mb-4">
           <h2 className="medium-bold mb-12">알림 설정</h2>
           <div className="flex justify-between">
             <h3 className="medium-regular">이메일 알림 수신</h3>
             <button>
-              <Toggle
-                isOn={true}
-                toggleFn={function (isOn: boolean): void {
-                  throw new Error("Function not implemented.");
-                }}
-              />
+              <Toggle isOn={isOn} toggleFn={() => setIsOn(!isOn)} />
             </button>
           </div>
         </div>

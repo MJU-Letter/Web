@@ -6,16 +6,26 @@ import { COLORS } from "@/constants/letterColors";
 import React, { useState } from "react";
 import LetterModalContent from "./LetterModalContent";
 
-const LetterModal = () => {
+interface letterModalProps {
+  isLetterModalOpened: boolean;
+  setIsLetterModalOpened: (isLetterModalOpened: boolean) => void;
+}
+
+const LetterModal = ({
+  isLetterModalOpened,
+  setIsLetterModalOpened,
+}: letterModalProps) => {
   const [selectedColor, setSelectedColor] =
     useState<keyof typeof COLORS>("red");
   const [isChecked, setIsChecked] = useState(false);
   const [textAreaValue, setTextAreaValue] = useState("");
   const handleYesClick = () => {
     console.log("Yes button clicked!");
+    setIsLetterModalOpened(!isLetterModalOpened);
   };
   const handleNoClick = () => {
     console.log("No button clicked!");
+    setIsLetterModalOpened(!isLetterModalOpened);
   };
 
   return (
