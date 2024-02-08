@@ -1,3 +1,4 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
@@ -27,7 +28,7 @@ const ProfileSetting = ({
     }
   };
   return (
-    <div className="w-300 flex flex-col justify-center items-center">
+    <div className="w-360 flex flex-col justify-center items-center">
       <h1 className="large-bold text-main-point ">프로필 설정</h1>
       <Image
         className="mt-58 mb-40  border-8 border-white shadow-sm w-134 h-134 rounded-[50%] object-contain"
