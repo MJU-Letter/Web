@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import test from "../../../../public/icons/testProfile.png";
 import SearchResult from "../../organisms/searchBar/SearchResult";
 import Search from "../search/Search";
+import Link from "next/link";
 
 const Main = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -33,24 +34,30 @@ const Main = () => {
         <Search />
       ) : (
         <div className="grid grid-cols-2 gap-16">
-          <MainProfile
-            profileImg={test}
-            name={"이보현"}
-            major={"경영학과"}
-            studentId={"21"}
-          />
-          <MainProfile
-            profileImg={test}
-            name={"이보현"}
-            major={"경영학과"}
-            studentId={"21"}
-          />
-          <MainProfile
-            profileImg={test}
-            name={"이보현"}
-            major={"경영학과"}
-            studentId={"21"}
-          />
+          <Link href="/test">
+            <MainProfile
+              profileImg={test}
+              name={"이보현"}
+              major={"경영학과"}
+              studentId={"21"}
+            />
+          </Link>
+          <Link href="/test">
+            <MainProfile
+              profileImg={test}
+              name={"이보현"}
+              major={"경영학과"}
+              studentId={"21"}
+            />{" "}
+          </Link>
+          <Link href="/test">
+            <MainProfile
+              profileImg={test}
+              name={"이보현"}
+              major={"경영학과"}
+              studentId={"21"}
+            />{" "}
+          </Link>
         </div>
       )}
     </div>
