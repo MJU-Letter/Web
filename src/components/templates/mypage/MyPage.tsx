@@ -30,16 +30,8 @@ const MyPage = () => {
 
       {selectedOption === "received" ? (
         <div className="grid grid-cols-2 gap-16">
-          <Letter
-            letterText={"안녕"}
-            backgroundColor={"#F39889"}
-            isMine={true}
-          />
-          <Letter
-            letterText={"안녕"}
-            backgroundColor={"#F39889"}
-            isMine={true}
-          />
+          <Letter letterText={"안녕"} backgroundColor="red" isMine={true} />
+          <Letter letterText={"안녕"} backgroundColor="blue" isMine={true} />
         </div>
       ) : (
         <div></div>

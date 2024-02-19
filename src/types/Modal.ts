@@ -1,5 +1,5 @@
 export interface modalProps {
-  info: string | React.ReactNode;
+  info?: string | React.ReactNode;
   noBtn?: {
     info: string;
     handler?: () => void;

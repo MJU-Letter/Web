@@ -23,12 +23,33 @@ const Navigation = () => {
 
   return (
     <>
-      {isOpened && (
+      <div className="relative z-header box-border">
+        {isOpened && (
+          <NavigationList isOpened={isOpened} setIsOpened={setIsOpened} />
+        )}
+        <div className="fixed z-header  flex items-center w-360 justify-between h-56 py-12 px-16 bg-main-background box-border">
+          <Link href={"/"}>
+            <Image className="w-67 h-32" src={logo} alt="logo" />
+          </Link>
+          <div className="flex">
+            <Link href={"/notice"}>
+              <NoticeIcon isOn={false} />
+            </Link>
+            <Image
+              className="ml-12 w-24 h-24 cursor-pointer"
+              onClick={handleIsOpened}
+              src={menu}
+              alt="menu"
+            />
+          </div>
+        </div>
+      </div>
+      {/* {isOpened && (
         <div className="relative">
           <NavigationList isOpened={isOpened} setIsOpened={setIsOpened} />
         </div>
       )}
-      <div className="flex items-center tablet:w-360 justify-between h-56 py-12 px-16 bg-main-background box-border">
+      <div className="fixed z-header  flex items-center w-360 justify-between h-56 py-12 px-16 bg-main-background box-border">
         <Link href={"/"}>
           <Image className="w-67 h-32" src={logo} alt="logo" />
         </Link>
@@ -43,7 +64,7 @@ const Navigation = () => {
             alt="menu"
           />
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

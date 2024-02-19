@@ -13,7 +13,6 @@ const Main = () => {
         명지인들과 롤링페이퍼로 마음을 나눠요
       </h1>
       <Link href={"/login/auth"}>
-        {" "}
         <button>
           <Image src={loginImg} alt="loginImg" />
         </button>

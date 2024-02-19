@@ -12,7 +12,7 @@ const Main = () => {
   const [selectedOption, setSelectedOption] = useState("이름");
 
   return (
-    <div className="mt-16 w-360  flex flex-col items-center">
+    <div className="w-360 flex flex-col items-center">
       <div className="ml-auto">
         <SearchBar
           searchValue={searchValue}
