@@ -1,4 +1,4 @@
-import Main from "@/components/templates/main/Main";
+import Main from "@/components/templates/social/main/Main";
 import Image from "next/image";
 import React from "react";
 

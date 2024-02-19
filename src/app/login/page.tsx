@@ -1,5 +1,5 @@
 "use client";
-import Main from "@/components/templates/login/Main";
+import Main from "@/components/templates/login/main/Main";
 import React from "react";
 
 const page = () => {

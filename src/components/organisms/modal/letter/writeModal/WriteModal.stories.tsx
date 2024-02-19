@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import WriteModal from "./WriteModal";
 const meta: Meta<typeof WriteModal> = {
-  title: "components/organisms/modal/WriteModal",
+  title: "components/organisms/modal/writeModal/WriteModal",
   component: WriteModal,
   tags: ["autodocs"],
   argTypes: {},
