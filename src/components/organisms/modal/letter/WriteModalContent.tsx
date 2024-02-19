@@ -20,7 +20,7 @@ const LetterModalContent = ({
   setSelectedColor,
 }: letterModalContentProps) => {
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center text-gray-dark-text-1 text-center whitespace-pre-line mb-44">
       <div className="mt-[-24px] mb-20 text-gray-dark-text-1 medium-medium">
         롤링페이퍼로 마음을 전해보세요.
       </div>

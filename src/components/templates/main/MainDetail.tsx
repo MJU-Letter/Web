@@ -1,22 +1,32 @@
 "use client";
-import DetailProfile from "../../atoms/profile/detailProfile/DetailProfile";
 import React, { useState } from "react";
 import test from "../../../../public/icons/testProfile.png";
-import Letter from "../../atoms/letter/Letter";
-import BottomFixedBtn from "../../atoms/button/bottomFixed/BottomFixed";
-import LetterModal from "@/components/organisms/modal/LetterModal";
+import WriteModal from "@/components/organisms/modal/letter/WriteModal";
+import { useDisclosure } from "@nextui-org/react";
+import ModalView from "@/components/molecules/modal/ModalView";
+import BottomFixedBtn from "@/components/atoms/button/bottomFixed/BottomFixed";
+import Letter from "@/components/atoms/letter/Letter";
+import DetailProfile from "@/components/atoms/profile/detailProfile/DetailProfile";
 
 const MainDetail = () => {
-  const [isLetterModalOpened, setLetterModalOpened] = useState(false);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const handleYesClick = () => {
+    console.log("Yes button clicked!");
+  };
+  const handleNoClick = () => {
+    console.log("No button clicked!");
+  };
   return (
     <>
-      {isLetterModalOpened && (
-        <LetterModal
-          isLetterModalOpened={isLetterModalOpened}
-          setIsLetterModalOpened={setLetterModalOpened}
-        />
-      )}
-      <div className="mt-20 relative tablet:min-h-full w-360 flex flex-col items-center justify-start">
+      <ModalView
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onOpenChange={onOpenChange}
+        children={<WriteModal />}
+        yesBtn={{ info: "확인", handler: handleYesClick }}
+        noBtn={{ info: "취소", handler: handleNoClick }}
+      />
+      <div className="relative tablet:min-h-full w-360 flex flex-col items-center justify-start">
         <div className="mb-28">
           <DetailProfile
             profileImg={test}
@@ -32,7 +42,16 @@ const MainDetail = () => {
                 letterText={
                   "안!~!~!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸지마~~!~!~!~!~!~!~!"
                 }
-                backgroundColor={"#F0D36D"}
+                backgroundColor="green"
+                isMine={false}
+              />
+            </div>{" "}
+            <div className="mb-16">
+              <Letter
+                letterText={
+                  "안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지마~~!~!~!~!~!~!~!"
+                }
+                backgroundColor="green"
                 isMine={false}
               />
             </div>
@@ -41,25 +60,42 @@ const MainDetail = () => {
                 letterText={
                   "안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지마~~!~!~!~!~!~!~!"
                 }
-                backgroundColor={"#F39889"}
+                backgroundColor="blue"
                 isMine={false}
               />
             </div>
-
             <div className="mb-16">
               <Letter
                 letterText={"안녕 말걸지마~~!~!~!~!~!~!~!"}
-                backgroundColor={"#9BC9E6"}
+                backgroundColor="yellow"
+                isMine={false}
+              />
+            </div>{" "}
+            <div className="mb-16">
+              <Letter
+                letterText={
+                  "안!~!~!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸지마~~!~!~!~!~!~!~!"
+                }
+                backgroundColor="blue"
                 isMine={false}
               />
             </div>
+            <div className="mb-16">
+              <Letter
+                letterText={
+                  "안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지마~~!~!~!~!~!~!~!"
+                }
+                backgroundColor="green"
+                isMine={false}
+              />
+            </div>{" "}
           </div>
           <div className="">
             <div className="mb-16">
               <Letter
                 letterText={"안녕 말걸지마~~!~!~!~!~!~!~!"}
-                backgroundColor={"#F39889"}
                 isMine={false}
+                backgroundColor={"red"}
               />
             </div>
             <div className="mb-16">
@@ -67,7 +103,7 @@ const MainDetail = () => {
                 letterText={
                   "안!~!~!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸지마~~!~!~!~!~!~!~!"
                 }
-                backgroundColor={"#F0D36D"}
+                backgroundColor="blue"
                 isMine={false}
               />
             </div>
@@ -76,18 +112,42 @@ const MainDetail = () => {
                 letterText={
                   "안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지마~~!~!~!~!~!~!~!"
                 }
-                backgroundColor={"#F39889"}
+                backgroundColor="green"
+                isMine={false}
+              />
+            </div>{" "}
+            <div className="mb-16">
+              <Letter
+                letterText={
+                  "안!~!~!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸!~!~!안녕 녕  말걸지마~~!~!~!~!~!~!~!"
+                }
+                backgroundColor="blue"
+                isMine={false}
+              />
+            </div>
+            <div className="mb-16">
+              <Letter
+                letterText={
+                  "안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지마~~!~!~!~!~!~!~!"
+                }
+                backgroundColor="green"
+                isMine={false}
+              />
+            </div>{" "}
+            <div className="mb-16">
+              <Letter
+                letterText={
+                  "안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지안녕 말걸지마~~!~!~!~!~!~!~!"
+                }
+                backgroundColor="green"
                 isMine={false}
               />
             </div>
           </div>
         </div>
-        <div
-          onClick={() => setLetterModalOpened(!isLetterModalOpened)}
-          className="m-16 fixed  bottom-0 right-0"
-        >
+        <button onClick={onOpen} className="m-16 sticky bottom-10 ml-auto ">
           <BottomFixedBtn usage={"write"} />
-        </div>
+        </button>
       </div>
     </>
   );

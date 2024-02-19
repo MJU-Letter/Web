@@ -1,15 +1,10 @@
-import Image, { StaticImageData } from "next/image";
+import { COLORS } from "@/constants/letterColors";
+import { letterProps } from "@/types/Letter";
+import Image from "next/image";
 import React from "react";
 import trash from "../../../../public/icons/trash.png";
 
-interface LetterProps {
-  letterText: string;
-  user?: { name: string; profileImg: StaticImageData | string };
-  backgroundColor: string;
-  isMine: boolean;
-}
-
-const Letter = ({ letterText, user, backgroundColor, isMine }: LetterProps) => {
+const Letter = ({ letterText, user, backgroundColor, isMine }: letterProps) => {
   const trimmedText =
     letterText.length > 140
       ? `${letterText.slice(0, 140)}... 더보기`
@@ -18,7 +13,7 @@ const Letter = ({ letterText, user, backgroundColor, isMine }: LetterProps) => {
     <div
       className={`w-148 pt-8 pb-12 px-12 gangwon-medium`}
       style={{
-        backgroundColor: `${backgroundColor}`,
+        backgroundColor: COLORS[backgroundColor],
         boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
       }}
     >

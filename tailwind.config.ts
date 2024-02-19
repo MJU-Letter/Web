@@ -1,3 +1,4 @@
+import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
 
 const px0_10 = { ...Array.from(Array(11)).map((_, i) => `${i}px`) } as any;
@@ -13,6 +14,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -49,12 +51,14 @@ const config: Config = {
         tablet: "1000px",
       },
       zIndex: {
-        modal: "100",
-        navigatoinList: "200",
-        letterModal: "200",
+        modal: "30",
+        navigatoinList: "50",
+        letterModal: "30",
+        header: "10",
       },
     },
   },
-  plugins: [require("tailwindcss")],
+  darkMode: "class",
+  plugins: [require("tailwindcss"), nextui()],
 };
 export default config;
