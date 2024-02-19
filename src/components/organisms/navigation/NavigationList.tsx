@@ -4,7 +4,7 @@ import React from "react";
 import close from "../../../../public/icons/close.png";
 import openLink from "../../../../public/icons/openLink.png";
 
-interface NavigationListProps {
+interface navigationListProps {
   user?: {
     major: string;
     studentId: string;
@@ -18,7 +18,7 @@ const NavigationList = ({
   user,
   isOpened,
   setIsOpened,
-}: NavigationListProps) => {
+}: navigationListProps) => {
   return (
     <div className="fixed z-navigatoinList bg-[#00000030] top-0 right-0 w-full h-full ">
       <div className="absolute right-0 flex flex-col w-240 h-screen bg-main-point">
@@ -28,6 +28,7 @@ const NavigationList = ({
         >
           <Image className="ml-auto w-24 h-24 m-16" src={close} alt="close" />
         </div>
+
         {user ? (
           <div className="mx-auto w-191 h-40 rounded-8 bg-white text-gray-dark-text-1 gangwon-xl flex items-center justify-center pt-6">
             {user?.major} {user?.studentId} {user?.name}

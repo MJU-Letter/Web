@@ -1,7 +1,7 @@
 "use client";
 import ProfileSetting from "@/components/organisms/profileSetting/ProfileSetting";
 import React from "react";
-import testProfile from "../../../../public/icons/testProfile.png";
+import testProfile '../../../'
 
 const page = () => {
   const test = () => {

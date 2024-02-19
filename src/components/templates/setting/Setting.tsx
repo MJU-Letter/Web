@@ -8,7 +8,7 @@ import Link from "next/link";
 const Setting = () => {
   const [isOn, setIsOn] = useState(false);
   return (
-    <div className="text-main-point flex flex-col items-center w-360 min-h-584 mt-16 ">
+    <div className="text-main-point flex flex-col items-center w-360 min-h-584">
       <h1 className="large-bold mb-28 text-center">설정</h1>
       <div className="pl-24 pr-20 flex flex-col justify-center items-center w-360">
         <div className="w-full h-54 mb-4 flex items-center justify-between">

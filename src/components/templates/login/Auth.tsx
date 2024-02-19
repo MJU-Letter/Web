@@ -3,9 +3,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import logo from "../../../../public/icons/logo.png";
 import check from "../../../../public/icons/check.png";
-import Modal from "@/components/organisms/modal/Modal";
-import AuthModal from "@/components/organisms/modal/AuthModal";
 import { AuthModalProps } from "@/types/Modal";
+import AuthModal from "@/components/organisms/modal/auth/AuthModal";
 
 interface AuthTemplateProps {
   isUploaded: boolean;
