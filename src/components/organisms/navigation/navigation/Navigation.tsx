@@ -1,12 +1,13 @@
 "use client";
-import NoticeIcon from "../../atoms/notice/noticeIcon/NoticeIcon";
+import NoticeIcon from "../../../atoms/notice/noticeIcon/NoticeIcon";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import logo from "../../../../public/icons/logo.png";
-import menu from "../../../../public/icons/menu.png";
-import NavigationList from "./NavigationList";
+import logo from "../../../../../public/icons/logo.png";
+import menu from "../../../../../public/icons/menu.png";
+
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
+import NavigationList from "../navigationList/NavigationList";
 
 const Navigation = () => {
   const [isOpened, setIsOpened] = useState(false);

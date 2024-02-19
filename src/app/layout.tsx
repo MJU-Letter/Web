@@ -1,10 +1,9 @@
-import MainDetail from "../components/templates/main/MainDetail";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import logo from "../../public/icons/logo.png";
 import "../styles/globals.css";
-import Navigation from "@/components/organisms/navigation/Navigation";
+import Navigation from "@/components/organisms/navigation/navigation/Navigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",

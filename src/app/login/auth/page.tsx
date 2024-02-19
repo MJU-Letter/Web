@@ -1,5 +1,5 @@
 "use client";
-import Auth from "@/components/templates/login/Auth";
+import Auth from "@/components/templates/login/auth/Auth";
 import React from "react";
 
 const page = () => {

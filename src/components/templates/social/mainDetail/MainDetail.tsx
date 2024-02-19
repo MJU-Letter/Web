@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import test from "../../../../public/icons/testProfile.png";
-import WriteModal from "@/components/organisms/modal/letter/WriteModal";
+import test from "../../../../../public/icons/testProfile.png";
+
 import { useDisclosure } from "@nextui-org/react";
 import ModalView from "@/components/molecules/modal/ModalView";
 import BottomFixedBtn from "@/components/atoms/button/bottomFixed/BottomFixed";
 import Letter from "@/components/atoms/letter/Letter";
 import DetailProfile from "@/components/atoms/profile/detailProfile/DetailProfile";
+import WriteModal from "@/components/organisms/modal/letter/writeModal/WriteModal";
 
 const MainDetail = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();

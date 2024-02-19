@@ -1,11 +1,12 @@
 "use client";
-import MainProfile from "../../atoms/profile/mainProfile/MainProfile";
-import SearchBar from "../../organisms/searchBar/SearchBar";
+
 import React, { useState } from "react";
-import test from "../../../../public/icons/testProfile.png";
-import SearchResult from "../../organisms/searchBar/SearchResult";
-import Search from "../search/Search";
+import test from "../../../../../public/icons/testProfile.png";
 import Link from "next/link";
+import MainProfile from "@/components/atoms/profile/mainProfile/MainProfile";
+import SearchBar from "@/components/organisms/searchBar/SearchBar";
+import SearchResult from "@/components/organisms/searchBar/SearchResult";
+import Search from "../../search/Search";
 
 const Main = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -34,7 +35,7 @@ const Main = () => {
         <Search />
       ) : (
         <div className="grid grid-cols-2 gap-16">
-          <Link href="/test">
+          <Link href="/detail">
             <MainProfile
               profileImg={test}
               name={"이보현"}
@@ -42,7 +43,7 @@ const Main = () => {
               studentId={"21"}
             />
           </Link>
-          <Link href="/test">
+          <Link href="/detail">
             <MainProfile
               profileImg={test}
               name={"이보현"}
@@ -50,7 +51,7 @@ const Main = () => {
               studentId={"21"}
             />{" "}
           </Link>
-          <Link href="/test">
+          <Link href="/detail">
             <MainProfile
               profileImg={test}
               name={"이보현"}

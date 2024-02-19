@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import close from "../../../../public/icons/close.png";
-import openLink from "../../../../public/icons/openLink.png";
+import close from "../../../../../public/icons/close.png";
+import openLink from "../../../../../public/icons/openLink.png";
 
 interface navigationListProps {
   user?: {
