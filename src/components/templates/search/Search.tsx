@@ -1,7 +1,7 @@
-import SearchBar from "../../organisms/searchBar/SearchBar";
 import React from "react";
-import SearchProfile from "../../atoms/profile/searchProfile/SearchProfile";
-import test from "../../../../public/icons/testProfile.png";
+
+import test from "@public/icons/testProfile.png";
+import SearchProfile from "@/components/atoms/profile/searchProfile/SearchProfile";
 
 interface searchProps {
   major: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import test from "../../../../../public/icons/testProfile.png";
+import test from "@public/icons/testProfile.png";
 import Link from "next/link";
 import MainProfile from "@/components/atoms/profile/mainProfile/MainProfile";
 import SearchBar from "@/components/organisms/searchBar/SearchBar";

@@ -8,31 +8,19 @@ interface colorPickProps {
 
 const ColorPick = ({ selectedColor, setSelectedColor }: colorPickProps) => {
   return (
-    <div className="transition-all flex w-120 items-center justify-between">
-      <button
-        onClick={() => setSelectedColor("red")}
-        className={` ${
-          selectedColor === "red" ? "border-2 border-main-point" : ""
-        }  bg-point-red w-24 h-24 rounded-[50%]`}
-      />
-      <button
-        onClick={() => setSelectedColor("green")}
-        className={` ${
-          selectedColor === "green" ? "border-2 border-main-point" : ""
-        } bg-point-green w-24 h-24 rounded-[50%]`}
-      />
-      <button
-        onClick={() => setSelectedColor("yellow")}
-        className={` ${
-          selectedColor === "yellow" ? "border-2 border-main-point" : ""
-        } bg-point-yellow w-24 h-24 rounded-[50%]`}
-      />
-      <button
-        onClick={() => setSelectedColor("blue")}
-        className={` ${
-          selectedColor === "blue" ? "border-2 border-main-point" : ""
-        } bg-point-blue w-24 h-24 rounded-[50%]`}
-      />
+    <div className=" flex w-120 items-center justify-between">
+      {Object.entries(COLORS).map(([colorName, colorValue]) => (
+        <button
+          key={colorName}
+          onClick={() => setSelectedColor(colorName as keyof typeof COLORS)}
+          className={`border-2 ${
+            selectedColor === colorName
+              ? "border-main-point"
+              : "border-transparent"
+          } transition-all ease-in-out duration-300 hover:scale-110 w-24 h-24 rounded-[50%]`}
+          style={{ backgroundColor: colorValue }}
+        />
+      ))}
     </div>
   );
 };

@@ -18,14 +18,17 @@ export default function RootLayout({
   return (
     <html lang="en" className=" bg-main-background">
       <body className="flex justify-center">
-        <figure className=" hidden tablet:flex tablet:h-screen  tablet:items-center tablet:pr-[216px] transition-opacity duration-500 ease-in-out opacity-0 tablet:opacity-100 ">
+        <figure className="hidden tablet:flex tablet:h-screen tablet:items-center tablet:pr-[216px] transition-opacity duration-500 ease-in-out opacity-0 tablet:opacity-100">
           <Image
             className="w-419 h-198 object-contain "
             src={logo}
             alt="logo"
           />
         </figure>
-        <main className="flex flex-col items-center tablet:flex-none w-fit ">
+        <main
+          id="modal"
+          className="flex flex-col items-center  relative  w-fit "
+        >
           <header className="w-full mb-76">
             <Navigation />
           </header>

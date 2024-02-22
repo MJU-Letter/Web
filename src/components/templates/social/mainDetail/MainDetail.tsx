@@ -1,32 +1,42 @@
 "use client";
-import React, { useState } from "react";
-import test from "../../../../../public/icons/testProfile.png";
-
-import { useDisclosure } from "@nextui-org/react";
-import ModalView from "@/components/molecules/modal/ModalView";
+import React from "react";
+import test from "@public/icons/testProfile.png";
 import BottomFixedBtn from "@/components/atoms/button/bottomFixed/BottomFixed";
 import Letter from "@/components/atoms/letter/Letter";
 import DetailProfile from "@/components/atoms/profile/detailProfile/DetailProfile";
 import WriteModal from "@/components/organisms/modal/letter/writeModal/WriteModal";
+import ModalViewTest from "@/components/molecules/modal/ModalViewTest";
+import ModalPortal from "@/utils/ModalPortal";
+import { AnimatePresence, motion } from "framer-motion";
+import useModal from "@/hooks/useModal";
 
 const MainDetail = () => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, openModal, closeModal } = useModal();
+
   const handleYesClick = () => {
     console.log("Yes button clicked!");
+    closeModal();
   };
   const handleNoClick = () => {
     console.log("No button clicked!");
+    closeModal();
   };
+
   return (
-    <>
-      <ModalView
-        isOpen={isOpen}
-        onOpen={onOpen}
-        onOpenChange={onOpenChange}
-        children={<WriteModal />}
-        yesBtn={{ info: "확인", handler: handleYesClick }}
-        noBtn={{ info: "취소", handler: handleNoClick }}
-      />
+    <div>
+      <AnimatePresence>
+        {isOpen && (
+          <ModalPortal>
+            <ModalViewTest
+              children={<WriteModal />}
+              isOpen={isOpen}
+              yesBtn={{ info: "작성 완료", handler: handleYesClick }}
+              noBtn={{ info: "취소", handler: handleNoClick }}
+            />
+          </ModalPortal>
+        )}
+      </AnimatePresence>
+
       <div className="relative tablet:min-h-full w-360 flex flex-col items-center justify-start">
         <div className="mb-28">
           <DetailProfile
@@ -146,11 +156,11 @@ const MainDetail = () => {
             </div>
           </div>
         </div>
-        <button onClick={onOpen} className="m-16 sticky bottom-10 ml-auto ">
+        <button onClick={openModal} className="m-16 sticky bottom-10 ml-auto ">
           <BottomFixedBtn usage={"write"} />
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

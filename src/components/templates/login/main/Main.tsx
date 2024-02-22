@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import logo from "../../../../../public/icons/logo.png";
-import loginImg from "../../../../../public/icons/loginImg.png";
+import logo from "@public/icons/logo.png";
+import loginImg from "@public/icons/loginImg.png";
 import Link from "next/link";
 
 const Main = () => {
