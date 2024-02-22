@@ -20,24 +20,28 @@ const LetterModalContent = ({
   setSelectedColor,
 }: letterModalContentProps) => {
   return (
-    <div className="flex flex-col justify-center text-gray-dark-text-1 text-center whitespace-pre-line mb-44">
-      <div className="mt-[-24px] mb-20 text-gray-dark-text-1 medium-medium">
+    <div className="mt-24 w-280 bg-white px-24 flex flex-col justify-center text-gray-dark-text-1 text-center whitespace-pre-line">
+      <div className=" mb-20 text-gray-dark-text-1 medium-medium">
         롤링페이퍼로 마음을 전해보세요.
       </div>
-      <textarea
-        value={textAreaValue}
-        onChange={(e) => setTextAreaValue(e.target.value)}
-        className="mb-12 focus:border-0 focus:outline-none w-232 min-h-264 overflow-y-scroll p-12 gangwon-medium text-black flex-nowrap "
-        style={{
-          backgroundColor: COLORS[selectedColor],
-          boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
-        }}
-      />
-      <ColorPick
-        selectedColor={selectedColor}
-        setSelectedColor={setSelectedColor}
-      />
-      <div className="mt-34 ml-auto mb-[-35px]">
+      <div>
+        <textarea
+          value={textAreaValue}
+          onChange={(e) => setTextAreaValue(e.target.value)}
+          className="mb-12 focus:border-0 focus:outline-none w-232 min-h-264 overflow-y-scroll p-12 gangwon-medium text-black flex-nowrap "
+          style={{
+            backgroundColor: COLORS[selectedColor],
+            boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
+          }}
+        />
+      </div>
+      <div className="w-fit">
+        <ColorPick
+          selectedColor={selectedColor}
+          setSelectedColor={setSelectedColor}
+        />
+      </div>
+      <div className="mt-34 ml-auto">
         <CheckBox isChecked={isChecked} setIsChecked={setIsChecked} />
       </div>
     </div>
