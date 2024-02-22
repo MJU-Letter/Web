@@ -1,6 +1,6 @@
 "use client";
 import DetailProfile from "@/components/atoms/profile/detailProfile/DetailProfile";
-import test from "../../../../public/icons/testProfile.png";
+import test from "@public/icons/testProfile.png";
 import React, { useState } from "react";
 import LetterToggle from "@/components/atoms/button/letterToggle/LetterToggle";
 import Letter from "@/components/atoms/letter/Letter";

@@ -1,4 +1,4 @@
-import NoticeList from "../../atoms/notice/noticeList/NoticeList";
+import NoticeList from "@/components/atoms/notice/noticeList/NoticeList";
 import React from "react";
 
 const Notice = () => {

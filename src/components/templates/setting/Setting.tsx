@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import arrowRight from "../../../../public/icons/arrowRight.png";
+import arrowRight from "@public/icons/arrowRight.png";
 import Toggle from "@/components/atoms/button/toggle/Toggle";
 import Link from "next/link";
 

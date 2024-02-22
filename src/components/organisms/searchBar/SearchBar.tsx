@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import arrowDown from "../../../../public/icons/arrowDown.png";
+import arrowDown from "@public/icons/arrowDown.png";
 import SearchResult from "./SearchResult";
 
 interface searchBarProps {
