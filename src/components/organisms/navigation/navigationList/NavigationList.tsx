@@ -1,3 +1,4 @@
+import useDeviceType from "@/hooks/useDeviceType";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -19,9 +20,19 @@ const NavigationList = ({
   isOpened,
   setIsOpened,
 }: navigationListProps) => {
+  const deviceType = useDeviceType();
+
   return (
-    <div className="fixed z-navigatoinList bg-[#00000030] top-0 right-0 w-full h-full ">
-      <div className="absolute right-0 flex flex-col w-240 h-screen bg-main-point">
+    <div
+      className={`${
+        deviceType === "mobile" ? "w-screen" : "w-max pl-150"
+      } fixed h-screen flex bg-[#00000045] z-modal `}
+    >
+      <div
+        className={`${
+          deviceType === "mobile" ? "absolute right-0" : ""
+        } flex flex-col w-240 h-screen bg-main-point`}
+      >
         <div
           className="mb-24 cursor-pointer"
           onClick={() => setIsOpened(false)}
