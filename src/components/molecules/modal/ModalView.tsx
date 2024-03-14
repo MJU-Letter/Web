@@ -1,101 +1,55 @@
-import { modalProps } from "@/types/Modal";
-import {
-  Button,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-} from "@nextui-org/react";
-import React, { HTMLAttributes } from "react";
-import { createPortal } from "react-dom";
-
-interface modalViewProps extends HTMLAttributes<HTMLDivElement> {
-  children?: React.ReactNode;
-
-  isOpen: boolean;
-  onOpen: () => void;
-  onOpenChange: (isOpen: boolean) => void;
-  noBtn?: {
-    info: string;
-    handler?: () => void;
-  };
-  yesBtn?: {
-    info: string;
-    handler?: () => void;
-  };
-}
+import NoButton from "@/components/atoms/button/modal/NoButton";
+import YesButton from "@/components/atoms/button/modal/YesButton";
+import useDeviceType from "@/hooks/useDeviceType";
+import { container } from "@/styles/animations";
+import { ModalViewProps } from "@/types/Modal";
+import { motion } from "framer-motion";
+import React from "react";
 
 const ModalView = ({
   children,
   isOpen,
-  onOpen,
-  onOpenChange,
   noBtn,
   yesBtn,
   ...props
-}: modalViewProps) => {
+}: ModalViewProps) => {
+  const deviceType = useDeviceType();
   return (
     <>
-      <>
-        <Modal
-          classNames={{
-            base: " pb-8 bg-red-50 rounded-16 w-fit min-h-fit overflow-x-hidden z-modal ",
-          }}
-          isDismissable={false}
-          shouldBlockScroll={true}
-          placement="center"
-          isOpen={isOpen}
-          hideCloseButton={true}
-          portalContainer={document.querySelector("main") as HTMLDivElement}
-          onOpenChange={onOpenChange}
-        >
-          <ModalContent>
-            {(onClose) => (
-              <>
-                <ModalBody>{children}</ModalBody>
-                <ModalFooter>
-                  {noBtn && yesBtn && (
-                    <div className="flex items-center w-full justify-center">
-                      <Button
-                        className="mr-8 w-120 h-44 bg-gray-light flex items-center justify-center text-gray-medium-text-2"
-                        onClick={() => {
-                          noBtn.handler && noBtn.handler();
-                          onClose();
-                        }}
-                      >
-                        {noBtn.info}
-                      </Button>
-                      <Button
-                        className="w-120 h-44  bg-main-point text-white flex items-center justify-center"
-                        onClick={() => {
-                          yesBtn.handler && yesBtn.handler();
-                          onClose();
-                        }}
-                      >
-                        {yesBtn.info}
-                      </Button>
-                    </div>
-                  )}
-                  {!noBtn && yesBtn && (
-                    <div>
-                      <Button
-                        className="mt-[-12px] w-248 h-44 bg-main-point text-white flex items-center justify-center"
-                        onClick={() => {
-                          yesBtn.handler && yesBtn.handler();
-                          onClose();
-                        }}
-                      >
-                        {yesBtn.info}
-                      </Button>
-                    </div>
-                  )}
-                </ModalFooter>
-              </>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+        className={`fixed h-screen flex items-center justify-center bg-[#00000060] z-modal transition-all ${
+          deviceType === "mobile" ? "w-screen" : "w-max px-40"
+        }`}
+      >
+        <div className="rounded-16 min-h-fit bg-white">
+          {children}
+          <div className="my-10">
+            {noBtn && yesBtn && (
+              <div className=" flex items-center w-full justify-center medium-medium">
+                <NoButton info={noBtn.info} handler={() => noBtn.handler()} />
+                <YesButton
+                  isOne={false}
+                  info={yesBtn.info}
+                  handler={() => yesBtn.handler()}
+                />
+              </div>
             )}
-          </ModalContent>
-        </Modal>
-      </>
-      ,
+            {!noBtn && yesBtn && (
+              <div>
+                <YesButton
+                  isOne={true}
+                  info={yesBtn.info}
+                  handler={() => yesBtn.handler()}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </motion.div>
     </>
   );
 };

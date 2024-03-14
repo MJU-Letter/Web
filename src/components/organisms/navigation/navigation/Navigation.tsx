@@ -9,10 +9,15 @@ import { useSearchParams } from "next/navigation";
 import NavigationList from "../navigationList/NavigationList";
 
 import ModalPortal from "@/utils/ModalPortal";
+import { AnimatePresence } from "framer-motion";
 
 const Navigation = () => {
   const [isOpened, setIsOpened] = useState(false);
-
+  if (isOpened) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
   const handleIsOpened = () => {
     setIsOpened(!isOpened);
   };
@@ -27,11 +32,13 @@ const Navigation = () => {
   return (
     <>
       <div className="relative z-header box-border">
-        <ModalPortal>
+        <AnimatePresence>
           {isOpened && (
-            <NavigationList isOpened={isOpened} setIsOpened={setIsOpened} />
+            <ModalPortal>
+              <NavigationList isOpened={isOpened} setIsOpened={setIsOpened} />
+            </ModalPortal>
           )}
-        </ModalPortal>
+        </AnimatePresence>
 
         <div className="fixed z-header  flex items-center w-360 justify-between h-56 py-12 px-16 bg-main-background box-border">
           <Link href={"/"}>
