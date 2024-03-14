@@ -4,6 +4,7 @@ import Image from "next/image";
 import logo from "../../public/icons/logo.png";
 import "../styles/globals.css";
 import Navigation from "@/components/organisms/navigation/navigation/Navigation";
+import RecoilRootWrapper from "@/recoil/recoilRootWrapper";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,22 +19,24 @@ export default function RootLayout({
   return (
     <html lang="en" className=" bg-main-background">
       <body className="flex justify-center">
-        <figure className="hidden tablet:flex tablet:h-screen tablet:items-center tablet:pr-[216px] transition-opacity duration-500 ease-in-out opacity-0 tablet:opacity-100">
-          <Image
-            className="w-419 h-198 object-contain "
-            src={logo}
-            alt="logo"
-          />
-        </figure>
-        <main
-          id="modal"
-          className="flex flex-col items-center  relative  w-fit "
-        >
-          <header className="w-full mb-76">
-            <Navigation />
-          </header>
-          {children}
-        </main>
+        <RecoilRootWrapper>
+          <figure className="hidden tablet:flex tablet:h-screen tablet:items-center tablet:pr-[216px] transition-opacity duration-500 ease-in-out opacity-0 tablet:opacity-100">
+            <Image
+              className="w-419 h-198 object-contain "
+              src={logo}
+              alt="logo"
+            />
+          </figure>
+          <main
+            id="modal"
+            className="flex flex-col items-center  relative  w-fit "
+          >
+            <header className="w-full mb-76">
+              <Navigation />
+            </header>
+            {children}
+          </main>
+        </RecoilRootWrapper>
       </body>
     </html>
   );
