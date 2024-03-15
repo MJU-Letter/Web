@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const useModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,11 +8,15 @@ const useModal = () => {
   const closeModal = () => {
     setIsOpen(false);
   };
-  if (isOpen) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      if (isOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+    }
+  }, [isOpen]);
   return {
     isOpen,
     openModal,

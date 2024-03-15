@@ -13,11 +13,15 @@ import { AnimatePresence } from "framer-motion";
 
 const Navigation = () => {
   const [isOpened, setIsOpened] = useState(false);
-  if (isOpened) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      if (isOpened) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+    }
+  }, [isOpened]);
   const handleIsOpened = () => {
     setIsOpened(!isOpened);
   };
