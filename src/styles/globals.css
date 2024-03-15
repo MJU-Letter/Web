@@ -2,33 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "../styles/variables.css";
+@import '../styles/variables.css';
 
 @font-face {
-  font-family: "NotoSansKR";
+  font-family: 'NotoSansKR';
   font-weight: 400;
   font-style: normal;
-  src: url("../../public/fonts/NotoSansKR-Regular.ttf") format("truetype");
+  src: url('../../public/fonts/NotoSansKR-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "NotoSansKR";
+  font-family: 'NotoSansKR';
   font-weight: 500;
   font-style: normal;
-  src: url("../../public/fonts/NotoSansKR-Medium.ttf") format("truetype");
+  src: url('../../public/fonts/NotoSansKR-Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "NotoSansKR";
+  font-family: 'NotoSansKR';
   font-weight: 700;
   font-style: normal;
-  src: url("../../public/fonts/NotoSansKR-Bold.ttf") format("truetype");
+  src: url('../../public/fonts/NotoSansKR-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "GangwonEduSaeeum_OTFMediumA";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff")
-    format("woff");
+  font-family: 'GangwonEduSaeeum_OTFMediumA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -107,7 +107,7 @@
   }
 
   .gangwon-xl {
-    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-family: 'GangwonEduSaeeum_OTFMediumA';
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -115,7 +115,7 @@
   }
 
   .gangwon-xl-under {
-    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-family: 'GangwonEduSaeeum_OTFMediumA';
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -123,7 +123,7 @@
   }
 
   .gangwon-large {
-    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-family: 'GangwonEduSaeeum_OTFMediumA';
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -131,7 +131,7 @@
   }
 
   .gangwon-medium {
-    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-family: 'GangwonEduSaeeum_OTFMediumA';
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -139,7 +139,7 @@
   }
 
   .gangwon-small {
-    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-family: 'GangwonEduSaeeum_OTFMediumA';
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -148,6 +148,6 @@
 }
 
 body {
-  font-family: "NotoSansKR";
+  font-family: 'NotoSansKR';
   background-color: var(--main-background);
 }

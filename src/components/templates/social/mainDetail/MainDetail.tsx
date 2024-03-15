@@ -5,7 +5,7 @@ import BottomFixedBtn from "@/components/atoms/button/bottomFixed/BottomFixed";
 import Letter from "@/components/atoms/letter/Letter";
 import DetailProfile from "@/components/atoms/profile/detailProfile/DetailProfile";
 import WriteModal from "@/components/organisms/modal/letter/writeModal/WriteModal";
-import ModalView from "@/components/molecules/modal/ModalView";
+import ModalView from "@/components/organisms/modal/ModalView";
 import ModalPortal from "@/utils/ModalPortal";
 import { AnimatePresence } from "framer-motion";
 import useModal from "@/hooks/useModal";

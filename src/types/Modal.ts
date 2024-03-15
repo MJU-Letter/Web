@@ -12,11 +12,11 @@ export interface ModalViewProps extends HTMLAttributes<HTMLDivElement> {
     handler: () => void;
   };
 }
-export interface AuthModalProps {
-  authStatus: undefined | "proceeding" | "checking" | "failed" | "successed";
-  studentInfo?: {
-    name: string;
-    major: string;
-    studentId: string;
-  };
-}
+// export interface AuthModalProps {
+//   authStatus: undefined | "proceeding" | "checking" | "failed" | "successed";
+//   studentInfo?: {
+//     name: string;
+//     major: string;
+//     studentId: string;
+//   };
+// }
