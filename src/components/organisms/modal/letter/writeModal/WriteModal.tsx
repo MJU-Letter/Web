@@ -1,4 +1,4 @@
-import ModalView from "@/components/molecules/modal/ModalView";
+import ModalView from "@/components/organisms/modal/ModalView";
 import { COLORS } from "@/constants/letterColors";
 import React, { useState } from "react";
 import LetterModalContent from "./WriteModalContent";

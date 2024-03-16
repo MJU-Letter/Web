@@ -5,9 +5,9 @@ import BottomFixedBtn from "@/components/atoms/button/bottomFixed/BottomFixed";
 import Letter from "@/components/atoms/letter/Letter";
 import DetailProfile from "@/components/atoms/profile/detailProfile/DetailProfile";
 import WriteModal from "@/components/organisms/modal/letter/writeModal/WriteModal";
-import ModalViewTest from "@/components/molecules/modal/ModalViewTest";
+import ModalView from "@/components/organisms/modal/ModalView";
 import ModalPortal from "@/utils/ModalPortal";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import useModal from "@/hooks/useModal";
 
 const MainDetail = () => {
@@ -27,7 +27,7 @@ const MainDetail = () => {
       <AnimatePresence>
         {isOpen && (
           <ModalPortal>
-            <ModalViewTest
+            <ModalView
               children={<WriteModal />}
               isOpen={isOpen}
               yesBtn={{ info: "작성 완료", handler: handleYesClick }}
