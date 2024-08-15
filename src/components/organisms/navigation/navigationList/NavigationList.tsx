@@ -53,10 +53,10 @@ const NavigationList = ({ user, isOpened, setIsOpened }: navigationListProps) =>
             <Link href={NAVIGATION.social.main_path}>
               <h1 className='large-bold mb-16'>홈</h1>
             </Link>
-            <Link href={NAVIGATION.mypage.path}>
+            <Link href={NAVIGATION.mypage.default_path}>
               <h1 className='large-bold pb-24 mb-24 border-b-1'>마이페이지</h1>
             </Link>
-            <Link href={NAVIGATION.setting.path}>
+            <Link href={NAVIGATION.setting.default_path}>
               <h1 className='large-regular mb-16'>설정</h1>
             </Link>
             <Link href={'/'}>

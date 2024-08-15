@@ -46,11 +46,11 @@ const Navigation = () => {
         </AnimatePresence>
 
         <div className='fixed z-header  flex items-center w-360 justify-between h-56 py-12 px-16 bg-main-background box-border'>
-          <Link href={'/'}>
+          <Link href={NAVIGATION.social.main_path}>
             <Image className='w-67 h-32' src={logo} alt='logo' />
           </Link>
           <div className='flex'>
-            <Link href={NAVIGATION.notice.path}>
+            <Link href={NAVIGATION.notice.default_path}>
               <NoticeIcon isOn={false} />
             </Link>
             <Image className='ml-12 w-24 h-24 cursor-pointer' onClick={handleIsOpened} src={menu} alt='menu' />

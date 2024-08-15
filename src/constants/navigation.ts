@@ -1,7 +1,7 @@
 export const NAVIGATION = {
   login: {
     title: 'login',
-    path: '/',
+    default_path: '/',
   },
   social: {
     title: 'social',
@@ -10,18 +10,19 @@ export const NAVIGATION = {
   },
   auth: {
     title: 'auth',
-    path: '/auth',
+    default_path: '/auth',
   },
   mypage: {
     title: 'my page',
-    path: '/mju-letter/mypage',
+    default_path: '/mju-letter/mypage',
   },
   notice: {
     title: 'notice',
-    path: '/mju-letter/notice',
+    default_path: '/mju-letter/notice',
   },
   setting: {
     title: 'setting',
-    path: '/mju-letter/setting',
+    default_path: '/mju-letter/setting',
+    profile_path: '/mju-letter/setting/profile',
   },
 };
