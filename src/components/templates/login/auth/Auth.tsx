@@ -1,10 +1,10 @@
-"use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import logo from "@public/icons/logo.png";
-import check from "@public/icons/check.png";
+'use client';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import logo from '@public/icons/logo.png';
+import check from '@public/icons/check.png';
 
-import AuthModal from "@/components/organisms/modal/auth/AuthModal";
+import AuthModal from '@/components/organisms/modal/auth/AuthModal';
 
 const Auth = () => {
   // const [authStatus, setAuthStatus] =
