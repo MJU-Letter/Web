@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import logo from '../../../public/icons/logo.png';
 import '../../styles/globals.css';
 import Navigation from '@/components/organisms/navigation/navigation/Navigation';
 
