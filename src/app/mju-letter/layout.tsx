@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import '../../styles/globals.css';
 import Navigation from '@/components/organisms/navigation/navigation/Navigation';
 
 export const metadata: Metadata = {
