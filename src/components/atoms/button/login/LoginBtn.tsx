@@ -1,6 +1,4 @@
-import Image from "next/image";
-import React from "react";
-import loginImg from "../../../../../public/icons/loginImg.png";
+import React from 'react';
 
 interface loginBtnProps {
   loginHandler: () => void;
@@ -8,8 +6,11 @@ interface loginBtnProps {
 
 const LoginBtn = ({ loginHandler }: loginBtnProps) => {
   return (
-    <div onClick={loginHandler} className="w-300 h-45">
-      <Image src={loginImg} alt="loginBtn" />
+    <div
+      onClick={loginHandler}
+      className='w-272 h-44 bg-main-point rounded-8 flex items-center justify-center text-white medium-medium'
+    >
+      로그인
     </div>
   );
 };
