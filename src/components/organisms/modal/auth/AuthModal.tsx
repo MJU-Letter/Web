@@ -1,7 +1,6 @@
 'use client';
 import ModalView from '@/components/organisms/modal/ModalView';
 import useModal from '@/hooks/useModal';
-import { authImgUploadType, authImgUploadState } from '@/recoil/AuthImgUploadState';
 import ModalPortal from '@/utils/ModalPortal';
 import { AnimatePresence } from 'framer-motion';
 import React, { useEffect } from 'react';
@@ -9,6 +8,7 @@ import { useRecoilState } from 'recoil';
 import ProceedingContent from './ProceedingContent';
 import CheckingContent from './CheckingContent';
 import FailedContent from './FailedContent';
+import { authImgUploadType, authImgUploadState } from '@/recoil/auth';
 
 const AuthModal = () => {
   const { isOpen, openModal, closeModal } = useModal();

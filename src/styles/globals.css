@@ -106,6 +106,14 @@
     line-height: 20px; /* 166.667% */
   }
 
+  .most-small-regular {
+    font-family: NotoSansKR;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
   .gangwon-xl {
     font-family: 'GangwonEduSaeeum_OTFMediumA';
     font-size: 20px;

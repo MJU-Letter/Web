@@ -1,14 +1,16 @@
 'use client';
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useRecoilState } from 'recoil';
-import { authImgUploadState, authImgUploadType } from '@/recoil/AuthImgUploadState';
+
 import check from '@public/icons/check.png';
 import Image from 'next/image';
+import { authImgUploadState, authImgUploadType } from '@/recoil/auth';
 
 const AuthImgUpload = () => {
   const [recoilAuthStatus, setRecoilAuthStatus] = useRecoilState<authImgUploadType>(authImgUploadState);
   const [authStatus, setAuthStatus] = useState(recoilAuthStatus);
   const [file, setFile] = useState<File | null>(null);
+
   useEffect(() => {
     setAuthStatus(recoilAuthStatus);
     console.log('client ', authStatus);

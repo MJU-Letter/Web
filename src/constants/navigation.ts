@@ -11,6 +11,7 @@ export const NAVIGATION = {
   auth: {
     title: 'auth',
     default_path: '/auth',
+    mjucard_path: '/auth/mjucard',
   },
   mypage: {
     title: 'my page',

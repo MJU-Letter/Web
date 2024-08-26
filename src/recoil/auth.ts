@@ -1,5 +1,9 @@
-import { atom, selector } from 'recoil';
-import { recoilPersist } from 'recoil-persist';
+import { atom } from 'recoil';
+
+export const isAuthFormDisabled = atom({
+  key: 'isAuthFormDisabled',
+  default: false,
+});
 
 // const localStorage = typeof window !== 'undefined' ? window.localStorage : undefined;
 
