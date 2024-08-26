@@ -13,9 +13,11 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className=''>
-      <Image className='w-67 h-32' src={logo} alt='logo' />
-      {children}
+    <div className='flex flex-col h-svh justify-center items-center'>
+      <div className='absolute top-0 w-360 h-56 px-16 py-12'>
+        <Image className='object-contain' width={67.63} height={32} src={logo} alt='logo' />
+      </div>
+      <div className='w-full px-32'>{children}</div>
     </div>
   );
 }

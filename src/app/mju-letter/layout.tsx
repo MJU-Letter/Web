@@ -12,11 +12,11 @@ export default function SocialLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='flex justify-center'>
-      <main id='modal' className='flex flex-col items-center  relative  w-fit '>
-        <header className='w-full mb-76'>
+    <div className='bg-red-100 flex flex-col h-svh'>
+      <main id='modal' className='flex flex-col items-center relative w-fit '>
+        <div className='w-full mb-76'>
           <Navigation />
-        </header>
+        </div>
         {children}
       </main>
     </div>

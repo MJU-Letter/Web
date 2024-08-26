@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import logo from '../../public/icons/logo.png';
-import '../styles/globals.css';
+import logo from '@public/icons/logo.png';
+import '@/styles/globals.css';
 import RecoilRootWrapper from '@/recoil/recoilRootWrapper';
 
 export const metadata: Metadata = {
@@ -16,12 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='bg-main-background'>
-      <body className='flex justify-center'>
+      <body className='flex h-svh justify-center items-center'>
         <RecoilRootWrapper>
           <figure className='hidden tablet:flex tablet:h-screen tablet:items-center tablet:pr-[216px] transition-opacity duration-500 ease-in-out opacity-0 tablet:opacity-100'>
             <Image className='w-419 h-198 object-contain ' src={logo} alt='logo' />
           </figure>
-          {children}
+          <div className='w-360'>{children}</div>
         </RecoilRootWrapper>
       </body>
     </html>
